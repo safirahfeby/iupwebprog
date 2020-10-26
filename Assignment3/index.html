@@ -80,7 +80,8 @@
                                 <a class="nav-link" href="Link-File/05211942000015_3.html" target="_blank">Padding</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="Link-File/05211942000015_4.html"target="_blank">Font-family</a>
+                                <a class="nav-link" href="Link-File/05211942000015_4.html"
+                                    target="_blank">Font-family</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="Link-File/05211942000015_5.html" target="_blank">Icon</a>
@@ -103,6 +104,20 @@
                         </iframe></iframe>
                         <p class="text-justify"> A collection of some of my moments with my high school and college
                             friends.</p>
+                    </div>
+                </div>
+
+
+                <div class="card mb-3 border-0 shadow rounded">
+                    <div class="card-body">
+                        <h2 class="card-title text-center mt-3">What time is it?</h2>
+                        <h3 class="card-title text-center">
+                            <div class="d-flex flex-wrap justify-content-center mt-2">
+                                <a><span class="badge hours"></span></a> :
+                                <a><span class="badge min"></span></a> :
+                                <a><span class="badge sec"></span></a>
+                            </div>
+                        </h3>
                     </div>
                 </div>
             </div>
@@ -157,7 +172,7 @@
                 <a href="https://www.instagram.com/safirahfeby/" target="_blank">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a herf="https://twitter.com/safirahfeby" target="_blank">
+                <a href="https://twitter.com/safirahfeby" target="_blank">
                     <i class="fab fa-twitter"></i>
                 </a>
 
@@ -168,10 +183,26 @@
         </div>
     </div>
     </div>
+
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+<script>
+    $(document).ready(function () {
+        setInterval(function () {
+            var hours = new Date().getHours();
+            $(".hours").html((hours < 10 ? "0" : "") + hours);
+        }, 1000);
+        setInterval(function () {
+            var minutes = new Date().getMinutes();
+            $(".min").html((minutes < 10 ? "0" : "") + minutes);
+        }, 1000);
+        setInterval(function () {
+            var seconds = new Date().getSeconds();
+            $(".sec").html((seconds < 10 ? "0" : "") + seconds);
+        }, 1000);
+    });
+</script>
 
 </html>
